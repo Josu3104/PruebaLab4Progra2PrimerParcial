@@ -19,7 +19,7 @@ public class AdminPalabrasSecretas {
         palabrasSecretas.add("AMAYA");
     }
 
-    public void agregarPalabra(String palabraSecreta) {
+    public static void agregarPalabra(String palabraSecreta) {
         palabrasSecretas.add(palabraSecreta);
     }
     

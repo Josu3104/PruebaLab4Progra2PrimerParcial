@@ -18,6 +18,7 @@ public class Menu extends javax.swing.JFrame {
     public Menu() {
         initComponents();
         AdminPalabrasSecretas pals = new AdminPalabrasSecretas(); 
+         JuegoAhorcadoAzar azar = new JuegoAhorcadoAzar(AdminPalabrasSecretas.palabrasSecretas);
     }
    
     
@@ -132,21 +133,23 @@ public class Menu extends javax.swing.JFrame {
     private void AhorcadoFijoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AhorcadoFijoActionPerformed
       
        Random randy = new Random();
-        int aleatorio = randy.nextInt(5);
+        int aleatorio = randy.nextInt(AdminPalabrasSecretas.palabrasSecretas.size());
         JuegoAhorcadoFijo AhorcadoFijoJuego= new JuegoAhorcadoFijo(AdminPalabrasSecretas.palabrasSecretas.get(aleatorio));
        AhorcadoFijoJuego.jugar();
+        System.out.println(AdminPalabrasSecretas.palabrasSecretas.size());
+        System.out.println(aleatorio);
     }//GEN-LAST:event_AhorcadoFijoActionPerformed
 
     private void InicializarPalabrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InicializarPalabrasActionPerformed
         InicializarPalabrasFijo inicializar = new InicializarPalabrasFijo();
         inicializar.setVisible(true);
-        this.dispose();
+        this.setVisible(false);
         
     }//GEN-LAST:event_InicializarPalabrasActionPerformed
 
     private void JugarAhorcadoAlAzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JugarAhorcadoAlAzarActionPerformed
        
-        JuegoAhorcadoAzar azar = new JuegoAhorcadoAzar(AdminPalabrasSecretas.palabrasSecretas);
+       
         JuegoAhorcadoAzar juegoAhorcadoAzar = new JuegoAhorcadoAzar(AdminPalabrasSecretas.getpalabrasSecretas());
         juegoAhorcadoAzar.jugar();
         System.out.println(AdminPalabrasSecretas.getpalabrasSecretas());
@@ -160,7 +163,7 @@ public class Menu extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     AgregarPalabras agregarPalabras = new AgregarPalabras();
     agregarPalabras.setVisible(true);
-    this.dispose();
+      this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

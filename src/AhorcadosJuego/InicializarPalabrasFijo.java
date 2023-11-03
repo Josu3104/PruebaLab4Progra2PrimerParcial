@@ -100,13 +100,13 @@ public class InicializarPalabrasFijo extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "La palabra se ha establecido correctamente.  ");
         Menu menu = new Menu();
         menu.setVisible(true);
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_aceptarActionPerformed
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
         Menu menu = new Menu();
         menu.setVisible(true);
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_volverActionPerformed
 
     /**
